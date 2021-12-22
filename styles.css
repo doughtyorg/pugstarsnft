@@ -8,6 +8,8 @@ Version: 0.2.2
 */
 /* -- CSS Reset -- */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,16 +26,64 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
+  color: #2a2d2e;
+  letter-spacing: 1px;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline; }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+
+html {
+  font-family: Bubblegum Sans, sans-serif;
+  letter-spacing: 1px;
+}
+
+.font-white {
+  color: white;
+}
+
+.font-yellow {
+  color: yellow;
+}
+
+.blackOutlineFont {
+  text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+}
+
 body {
-  line-height: 1; }
+  line-height: 1;
+}
+
+footer {
+  background-color: black;
+  padding: 2rem 0;
+}
 
 ol, ul {
   list-style: none; }
@@ -51,12 +101,254 @@ table {
   border-spacing: 0; }
 
 .pug-navBar {
-  position: absolute;
-  padding: 2rem;
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .pug-navBar {
+    position: absolute;
+    padding: 2rem;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    width: 90%;
+  }
+}
+
+.pugArc {
+  /* background-color: #108dad; */
+  position: relative;
+  background: radial-gradient(circle farthest-side, #bbe7f2, #108dad);
+  background-repeat: no-repeat;
+  padding: 0 2rem;
+}
+
+.pugstars-content {
+  margin-top: 1rem;
+}
+
+.summary {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.bradyBunchPic {
+  width: 150px; 
+  border-radius: 15px;
+}
+
+.flexContainer {
   display: flex;
-  height: 50px;
+  flex-wrap: wrap;
+}
+
+.pugContainer{
+    width: 300;
+    height: 300;
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-row: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+
+.sagaSection {
+  min-height: 28rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.sagaSection > div > p {
+  margin-bottom: 2rem;
+}
+
+.sagaImage::before {
+  background-image: url(images/StarJar_Background.png);
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.sagaSection > div {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+.sagaSection > div > p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.roadmap {
+  position: relative;
+  background: radial-gradient(circle farthest-side, #dab8f3, #683b8a);
+  background-repeat: no-repeat;
+}
+
+.milestoneContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+.roadmapMilestone {
+  display: flex;
+  flex: 1 1 50%;
   align-items: center;
-  width: 90%;
+  background-color: white;
+  margin: 1rem;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.milestone-description {
+  font-size: 2rem;
+  line-height: 2rem;
+  padding-left: 1rem;
+}
+
+.icon > img {
+  width: 60px;
+}
+
+.ourTeam {
+  background-image: url(images/gold-bones-background.png);
+  background-repeat: repeat;
+  min-height: 28rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.teamList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.teamMember {
+  flex: 1 1 25%;
+  min-width: 250px;
+  margin: 2rem;
+}
+
+.teamProfile > img {
+  width: 100%;
+}
+
+.teamName {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.network {
+  padding-right: 2rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: fadein 6s;
+          animation: fadein 6s;
+  margin-top: auto; }
+
+@media screen and (min-width: 800px) {
+  .network {
+    padding-right: 4rem;
+    }
+  .pugArc {
+    padding-top: 5rem;
+  }
+  .pugstars-content {
+    margin-top: 1rem;
+  }
+  .pug-heading {
+    font-size: 7rem;
+  }
+  .summary {
+    flex: 1 1;
+    line-height: 3rem;
+    padding: 0 1.4rem;
+  }
+  .pugContainer {
+    grid-template-columns: 175px 175px;
+  }
+  .bradyBunchPic {
+    width: 175px; 
+    border-radius: 15px
+  }
+  .pugContainer {
+    margin-top: 2rem;
+  }
+  .sagaSection {
+    min-height: 48rem;
+    padding: 4rem;
+  }
+  .roadmap {
+    padding: 4rem;
+  }
+  .milestone-description {
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 2rem;
+  }
+}
+
+.pugLore {
+  position: relative;
+  background: radial-gradient(circle farthest-side, #fbb708, #d17f19);
+  background-repeat: no-repeat;
+  padding: 1rem;
+  z-index: 9;
+  margin-top: -4rem;
+  color: #2a2d2e;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 800px) {
+  .pugArc {
+    margin-top: -3%;
+  }
+  .pugLore {
+    padding: 5rem;
+  }
+}
+
+.pugLore > .bio > p > a {
+  color: #2a2d2e;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+.pugArcPic {
+  flex: 1 1;
+  margin: 0 -10%;
+}
+
+.pugArcPic > img {
+  width: 100%;
+}
+
+.pugArc:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .nav-menuContainer {
@@ -66,14 +358,7 @@ table {
   flex-grow: 1;
 }
 
-.nav-menuContainer a {
-  color: white;
-
-}
-
-.nav-menuItem {
-  color: white;
-  font-size: 2rem;
+.nav-menuItem > a {
   padding: 0 1rem;
 }
 
@@ -107,7 +392,6 @@ body {
   border-style: none; }
 
 body,
-p,
 a,
 a:hover {
   color: #000000; }
@@ -132,31 +416,17 @@ a:hover {
     opacity: 1; } }
 
 body.page-template-page-fullsingle-me {
-  height: 100vh;
-  font-family: "Inter",sans-serif;
   font-weight: 500;
   font-size: 45px;
-  line-height: 60px;
   letter-spacing: -0.5px;
   color: #2a2626; 
 }
-body.page-template-page-fullsingle-me p {
-  margin-bottom: 28px;
-  color: #2a2626; 
-}
-
-@media (max-width: 800px) {
-  body.page-template-page-fullsingle-me p {
-    font-size: 32px;
-    line-height: 40px; 
-  } 
-}
 
 .hero-pugstar {
-  background-image: url("../../images/background.jpg");
+  background-image: url(dog-park-complete.png);
   background-position: center center;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 48vh;
 }
 
 .hero-pugstar a {
@@ -171,25 +441,15 @@ body.page-template-page-fullsingle-me p {
   transition: 0.1s; 
 }
 
+@media screen and (min-width: 800px) {
+  .hero-pugstar {
+    min-height: 100vh;
+    background-image: url(images/1241932_Dogpark-NFTPugstars_121621.jpeg);
+  }
+}
+
 .fs-me {
-  padding: 10vh 10vw;
-}
-
-.brown-section {
-  position: relative;
-}
-
-.brown-section:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: .5;
-  z-index: -1;
-  background-image: url('images/bones-background-blue.jpg');
+  padding: 0 10%;
 }
 
 @media (max-width: 500px) {
@@ -198,7 +458,6 @@ body.page-template-page-fullsingle-me p {
     text-align: center; } 
 }
 .fs-me .pugstars-content {
-  height: 80vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -209,7 +468,6 @@ body.page-template-page-fullsingle-me p {
 }
 @media (max-width: 500px) {
   .fs-me .pugstars-content {
-    height: 90vh; 
   } 
 }
 
@@ -239,26 +497,17 @@ body.page-template-page-fullsingle-me p {
 .bio {
   letter-spacing: -1px;
   min-width: 50%;
-  padding: 2rem;
+  padding: 1rem;
+  font-size: 2rem;
 }
-  @media (max-width: 800px) {
+  @media (min-width: 800px) {
     .bio {
-      max-width: none; } }
+      max-width: none;
+      padding: 2rem;
+      font-size: 4rem;
+    } 
+  }
 
-.network {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-          flex: 1 1 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-animation: fadein 6s;
-          animation: fadein 6s;
-  margin-top: auto; }
   .network ul {
     -webkit-animation: fadein 6s;
             animation: fadein 6s;
@@ -348,21 +597,6 @@ body.page-template-page-fullsingle-me.me-video {
   body.page-template-page-fullsingle-me.me-video .fs-me {
     background-color: rgba(0, 0, 0, 0.6); }
 
-.summary {
-  font-size: 1.4rem;
-  line-height: 30px;
-}
-
-.pugContainer{
-    width: 300;
-    height: 300;
-    display: grid;
-    grid-template-columns: 200px 200px;
-    grid-row: auto auto;
-    grid-column-gap: 10px;
-    grid-row-gap: 0px;
-}
-
 .pugProfiles {
   margin: 0 auto;
 }
@@ -379,5 +613,4 @@ body.page-template-page-fullsingle-me.me-video {
     align-items:center;
     justify-content:center;
     font-size:40px;
-    font-family:sans-serif;
   }
